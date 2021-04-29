@@ -1,0 +1,20 @@
+pipeline {
+     agent any
+     
+     stages {
+         
+         stage("install apache pkg") {
+             steps{
+                 sh 'sudo apt-get install apache2 -y'
+             }
+         }
+         
+         stage("Display apache2 status") {
+             steps{
+                 sh 'sudo service apache2 status'
+             }
+         }
+         
+         
+         
+     }
